@@ -1,0 +1,6 @@
+@import 'styles/index';
+
+.container {
+  height: 100%;
+  @include centralize();
+}

@@ -1,0 +1,29 @@
+@import 'styles/index';
+
+.container {
+  position: relative;
+  overflow-y: hidden;
+
+  .score {
+    position: absolute;
+    top: $spacer;
+    left: $spacer;
+    padding: 0 $spacer;
+    font-size: 60px;
+    background: $dark;
+    border-radius: 17px;
+  }
+
+  .timer {
+    position: absolute;
+    top: $spacer;
+    right: $spacer;
+  }
+
+  .graph {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}

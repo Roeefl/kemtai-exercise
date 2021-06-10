@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { store } from './app/store';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { QueryParamProvider } from 'use-query-params';
 import App from './App';
 import './index.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <Router>
+      <QueryParamProvider ReactRouterRoute={Route}>
+        <App />
+      </QueryParamProvider>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

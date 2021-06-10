@@ -1,28 +1,24 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from 'react-router-dom';
-import Home from 'pages/Home';
-import logo from 'assets/logo.svg';
+import { Switch, Route } from 'react-router-dom';
+import HomePage from 'pages/Home/Home';
+import WorkoutPage from 'pages/Workout/Workout';
+import ThankYouPage from 'pages/ThankYou/ThankYou';
 import styles from './App.module.scss';
 
 function App() {
   return (
-    <Router>
-      <div className={styles.app}>
-        <header className={styles.header}>
-          <img src={logo} alt="app-logo" className={styles.logo} />
-        </header>
-        <main className={styles.main}>
-          <Switch>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
-        </main>
-      </div>
-    </Router>
+    <div className={styles.app}>
+      <Switch>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+        <Route path="/workout">
+          <WorkoutPage />
+        </Route>
+        <Route path="/thanks">
+          <ThankYouPage />
+        </Route>
+      </Switch>
+    </div>
   );
 }
 

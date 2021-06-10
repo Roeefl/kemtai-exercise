@@ -1,0 +1,29 @@
+@import 'styles/index';
+
+$dot-width: 17px;
+$dot-max-height: 100px;
+$dot-color: #a9a9a9;
+
+.container {
+  .dots {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .dot {
+      width: $dot-width;
+      margin: 0 $spacer / 2;
+      opacity: 0.6;
+      background: $dot-color;
+      border-radius: $spacer / 2;
+
+      &.previous {
+        background: white;
+      }
+
+      &.isActive {
+        background-image: linear-gradient(4deg, #ffff00 1%, #b3fe00 100%, #aafe00 100%);
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import 'styles/index';
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background: $primary;
+  color: $text;
+  
+  .header {
+    padding: $spacer;
+    height: $spacer * 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+      width: 25%;
+    }
+  }
+
+  .main {
+    flex: 1;
+  }
+}

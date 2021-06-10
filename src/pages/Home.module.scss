@@ -1,0 +1,14 @@
+@import 'styles/index';
+
+.workouts {
+  display: flex;
+  flex-direction: column;
+  
+  .workout {
+    margin: $spacer / 2 0;
+
+    .image {
+      width: 80%;
+    }
+  }
+}
